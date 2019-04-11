@@ -37,7 +37,7 @@ static void release_task(struct task_struct * p)
 	free_uid(p->user);
 	unhash_process(p);
 	//Added by Idan Hw1.
-	//kfree(p->restrictions_list);
+	kfree(p->restrictions_list);
 	
 	
 	release_thread(p);
